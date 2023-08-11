@@ -28,10 +28,14 @@ async def cmd_test1(message: types.Message):
 async def cmd_test2(message: types.Message):
     await message.answer("Krasava")
 
-#@dp.message(Command("dice"))
-#async def cmd_dice(message: types.Message):
-#   await message.answer_dice(emoji="🎲")
-
+@dp.message(Command("star"))
+async def cmd_start(message: types.Message):
+    kb = [
+        [types.KeyboardButton(text="С пюрешкой")],
+        [types.KeyboardButton(text="Без пюрешки")]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=kb)
+    await message.answer("Как подавать котлеты?", reply_markup=keyboard)
 
 @dp.message(Command("dice"))
 async def cmd_dice(message: types.Message, bot: Bot):
