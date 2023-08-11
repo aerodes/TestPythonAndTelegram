@@ -31,6 +31,8 @@ async def cmd_test2(message: types.Message):
 @dp.message(Command("star"))
 async def cmd_start(message: types.Message):
     kb = [
+        [types.KeyboardButton(text="dice")],
+        [types.KeyboardButton(text="Без пюрешки")]
         [types.KeyboardButton(text=f"Да")],
         [types.KeyboardButton(text=f"Нет")]
 
@@ -40,10 +42,10 @@ async def cmd_start(message: types.Message):
         resize_keyboard=True,
         input_field_placeholder="УВЕРЕН??"
     )
-    await message.answer(f"Отправим Денису кубик?)", reply_markup=keyboard) 
+    await message.answer(f"Отправим Денису кубик?)", reply_markup=keyboard)
 
-@dp.message(lambda message: message.text == "Да")    #Это позже перенесу в отдельные кнопки и еще до этого добалю выбор 
-async def cmd_dice(message: types.Message, bot: Bot): #надо только узнать как без команды начинать взаимодействие, чтобы сразу было меню с командами
+@dp.message(lambda message: message.text == "Да")
+async def cmd_dice(message: types.Message, bot: Bot):
     await bot.send_dice(chat_id=1132448356, emoji=DiceEmoji.DICE)
 
 @dp.message(lambda message: message.text == "Нет")
@@ -52,7 +54,7 @@ async def without_puree(message: types.Message):
 
 @dp.message(Command("dice"))
 async def cmd_dice(message: types.Message, bot: Bot):
-    await bot.send_dice(chat_id=450998839, emoji=DiceEmoji.DICE)   ##Пока тут айпи Стаса, может придумаем чот
+    await bot.send_dice(chat_id=450998839, emoji=DiceEmoji.DICE)
 
 # Запуск процесса поллинга новых апдейтов
 
