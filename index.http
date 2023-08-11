@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вспомнить старое</title>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+</head>
+
+<body>
+    <div class="content">
+        <div class="wrap">
+            <div class="title">
+                Тариф минимум
+                <div class="price">
+                    9000
+                    <span class="currency">
+                        руб.
+                    </span>
+                </div>
+                <div class="info">
+                    <p>
+                        Шары 30 шт. разноцветные
+                    </p>
+                    <p>
+                        Наклейка на машину
+                    </p>
+                    <p>
+                        Фотосъемка (15 фотографий оформленных в фотокнигу)
+                    </p>
+                </div>
+            </div>
+            <button class="order">
+                Заказать услугу
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
 
