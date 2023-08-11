@@ -31,7 +31,7 @@ async def cmd_test2(message: types.Message):
 @dp.message(Command("star"))
 async def cmd_start(message: types.Message):
     kb = [
-        [types.KeyboardButton(text="С пюрешкой")],
+        [types.KeyboardButton(text="dice")],
         [types.KeyboardButton(text="Без пюрешки")]
     ]
     keyboard = types.ReplyKeyboardMarkup(keyboard=kb)
