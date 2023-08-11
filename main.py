@@ -26,7 +26,7 @@ async def cmd_test1(message: types.Message):
 # Хэндлер на команду /test2
 @dp.message(Command("test2"))
 async def cmd_test2(message: types.Message):
-    await message.answer("huisosite")
+    await message.answer("Krasava")
 
 #@dp.message(Command("dice"))
 #async def cmd_dice(message: types.Message):
@@ -44,4 +44,6 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+
 
